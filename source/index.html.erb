@@ -1,5 +1,7 @@
 ---
 title: Landing page HTML/CSS - Atelier Google de Nancy
+---
+
 
 <%= partial "components/banner" %>
 
@@ -51,9 +53,7 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
   <body>
     <h1>Le cabinet d'avocat 2.0</h1>
     <p>Contrats, propriété intellectuelle et innovation</p>
-    <p>
-      <a href="#">Contactez nous</a>
-    </p>
+    <a href="#" class="btn btn-blue">Contactez nous</a>
 
     <img src="images/hammer.png" alt="icon marteau" width="100">
     <h2>Droit du numérique</h2>
@@ -104,29 +104,30 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
 <% code("css") do %>
 /* style.css */
 body{
-  background: rgb(245,245,245);
-  color: green;
-  font-size: 25px;
-  font-family: Helvetica;
-}
-h1{
-  font-family: Courier;
-  color: red;
+  background: rgb(240,240,240);
+  color: rgb(20, 20, 20);
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
   font-weight: lighter;
-  font-size: 10px;
+}
+h1, h2, h3 {
+  font-family: Courier;
+  font-weight: bold;
+}
+h1 {
+  font-size: 40px;
 }
 h2 {
-  font-family: Courier;
-  color: pink;
-  font-weight: lighter;
-  font-size: 8px;
+  font-size: 24px;
+  color: #6A71E1;
 }
 a {
-  color: yellow;
+  color: #6A71E1;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: none;
-  color: purple;
+  color: black;
 }
 <% end %>
       </section>
@@ -139,7 +140,7 @@ a:hover {
         </ul>
 
 <% code("html") do %>
-<div>
+<div id="banner">
   <h1>Le cabinet d'avocat 2.0</h1>
   <p>Contrats, propriété intellectuelle et innovation</p>
   <p>
@@ -147,32 +148,26 @@ a:hover {
   </p>
 </div>
 
-<div>
+<div class="card">
   <img src="images/hammer.png" alt="icon marteau" width="100">
   <h2>Droit du numérique</h2>
   <p>Protection, licences, contrats SaaS et d’intégration.</p>
 </div>
 
-<div>
+<div class="card">
   <img src="images/laptop.png" alt="icon ordinateur" width="100">
   <h2>Nouvelles technologies</h2>
   <p>Conditions générales d’utilisation, contrats de développement</p>
 </div>
 
-<div>
+<div class="card">
   <img src="images/book.png" alt="icon livre" width="100">
   <h2>Propriété intellectuelle</h2>
   <p>Définition de la stratégie, protection et audit de portefeuilles</p>
 </div>
 
-<div>
-  <img src="images/libra.png" alt="icon balance" width="100">
-  <h2>Médiation</h2>
-  <p>Et transactions dans le cadre de contentieux.</p>
-</div>
-
-<div>
-  <p>Landing page créée par Philippine Berton</p>
+<div id="footer">
+  <p>Landing page créée à l'Atelier Google de Nancy</p>
 </div>
 <% end %>
 
@@ -182,15 +177,17 @@ a:hover {
         <ul>
           <li>Nommer votre banner et footer en utilisant un <code>id</code> commme <code>&lt;div id="banner"&gt;</code> et <code>&lt;div id="footer"&gt;</code></li>
           <li>Nommer vos fonctionnalités en utilisant une <code>class</code> comme <code>&lt;div class="card"&gt;</code></li>
+          <li>Styliser votre bouton en utilisant <code>class</code> comme <code>&lt;div class="btn btn-blue"&gt;</code></li>
           <li>Ajoutez ensuite ce code CSS</li>
         </ul>
 <% code("css") do %>
 #banner{
   text-align: center;
-  background-image: linear-gradient(rgba(200, 200, 200, 0.3), rgba(200, 200, 200, 0.3)), url("https://source.unsplash.com/1600x900/?lawyer");
-  background-size: cover;
-  padding: 150px 0;
   color: white;
+  padding: 150px 0px;
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%), url("https://picsum.photos/1000/600?random");
+  background-size: cover;
+  background-position: center;
 }
 #banner h1 {
   color: white;
@@ -201,6 +198,7 @@ a:hover {
   opacity: 0.8;
   font-size: 30px;
   font-weight: lighter;
+  margin-bottom: 40px;
 }
 #footer{
   padding: 30px;
@@ -208,11 +206,28 @@ a:hover {
   color: lightgrey;
 }
 .card{
-  padding: 50px;
-  font-weight: lighter;
+  background-color: white;
+  border-radius: 4px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11);
+  padding: 18px;
+  margin: 16px 0px;
 }
-
+.card img {
+  margin-bottom: 20px;
+  height: 230px;
+}
+.btn-blue {
+  color: white;
+  background: #6772e5;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11);
+  border-radius: 4px;
+  padding: 15px 20px;
+}
+.btn-blue:hover {
+  background: #7795f8;
+  color: white;
+}
 .container {
   width: 100%!important;
 }
@@ -241,12 +256,14 @@ a:hover {
           </li>
         </ul>
 <% code("html") do %>
-<ul>
-  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-  <li><a href="#"><i class="fab fa-github"></i></a></li>
-</ul>
+<div id="footer">
+  <ul class="list-inline">
+    <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
+  </ul>
+</div>
 <% end %>
         <ul>
           <li>
@@ -256,7 +273,7 @@ a:hover {
 <% code("css") do %>
 #footer a {
   color: lightgrey;
-  font-size: 15px;
+  font-size: 30px;
 }
 #footer a:hover {
   color: white;
@@ -274,7 +291,7 @@ a:hover {
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href='style.css' rel='stylesheet'>
 </head>
 <% end %>
@@ -287,14 +304,11 @@ a:hover {
       <section class="readme-section">
         <h2 class="readme-header">8. Bootstrap <tag class="blue">grid</tag></h2>
         <ul>
-          <li>Insérez vos 4 div cartes dans le grid responsive suivant</li>
+          <li>Insérez vos 3 div cartes dans le grid responsive suivant</li>
         </ul>
 <% code("html") do %>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <!-- div class="card" -->
-    </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <!-- div class="card" -->
     </div>

@@ -13031,11 +13031,6 @@ tag {
     background-color: #FFF7E8; }
 
 /* Build your own button classes ! */
-/* line 1, /Users/phi/code/Ceriiise/google/source/stylesheets/components/_footer.scss */
-.footer {
-  border-top: 1px solid #E6E6E6;
-  text-align: center; }
-
 /* Headings */
 /* line 4, /Users/phi/code/Ceriiise/google/source/stylesheets/components/_headers.scss */
 .section-heading {

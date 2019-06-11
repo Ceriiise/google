@@ -36,10 +36,9 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
           <li>
             Pour gagner du temps, Faites clique-droit sur les images suivantes et sauvez les dans votre dossier <code>images</code>
             <ul class="list-inline">
-              <li><img src="images/hammer.png" alt="" width="100"></li>
-              <li><img src="images/laptop.png" alt="" width="100"></li>
-              <li><img src="images/book.png" alt="" width="100"></li>
-              <li><img src="images/libra.png" alt="" width="100"></li>
+              <li><img src="images/fast.png" alt="" width="100"></li>
+              <li><img src="images/trustable.png" alt="" width="100"></li>
+              <li><img src="images/affordable.png" alt="" width="100"></li>
             </ul>
           </li>
           <li>Commencez ensuite à partir de ce code HTML dans <code>index.html</code></li>
@@ -48,28 +47,26 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Atelier Google landing page</title>
+    <title>Atelier Google - Landing page</title>
   </head>
   <body>
-    <h1>Le cabinet d'avocat 2.0</h1>
-    <p>Contrats, propriété intellectuelle et innovation</p>
+    <h1>Mon projet</h1>
+    <p>Punchline de votre projet de folie</p>
     <a href="#" class="btn btn-blue">Contactez nous</a>
 
-    <img src="images/hammer.png" alt="icon marteau" width="100">
-    <h2>Droit du numérique</h2>
-    <p>Protection, licences, contrats SaaS et d’intégration.</p>
+    <img src="images/fast.png" alt="icon fast" width="100">
+    <h2>Rapide</h2>
+    <p>Nous vous livrons vite, vraiment <strong>très vite</strong>.</p>
 
-    <img src="images/laptop.png" alt="icon ordinateur" width="100">
-    <h2>Nouvelles technologies</h2>
-    <p>Conditions générales d’utilisation, contrats de développement</p>
+    <img src="images/trustable.png" alt="icon trustable" width="100">
+    <h2>Digne de confiance</h2>
+    <p>Vous pouvez nous faire confiance, <strong>vraiment</strong>.</p>
 
-    <img src="images/book.png" alt="icon livre" width="100">
-    <h2>Propriété intellectuelle</h2>
-    <p>Définition de la stratégie, protection et audit de portefeuilles</p>
+    <img src="images/affordable.png" alt="icon affordable" width="100">
+    <h2>Abordable</h2>
+    <p>Nous adaptons notre prix à <strong>votre situation</strong>.</p>
 
-    <img src="images/libra.png" alt="icon balance" width="100">
-    <h2>Médiation</h2>
-    <p>Et transactions dans le cadre de contentieux.</p>
+    <p>Landing page créée à l'Atelier Google de Nancy</p>
 
 </body>
 </html>
@@ -140,33 +137,31 @@ a:hover {
         </ul>
 
 <% code("html") do %>
-<div id="banner">
-  <h1>Le cabinet d'avocat 2.0</h1>
-  <p>Contrats, propriété intellectuelle et innovation</p>
-  <p>
-    <a href="#">Contactez nous</a>
-  </p>
+<div>
+  <h1>Mon projet</h1>
+  <p>Punchline de votre projet de folie</p>
+  <a href="#">Contactez nous</a>
 </div>
 
-<div class="card">
-  <img src="images/hammer.png" alt="icon marteau" width="100">
-  <h2>Droit du numérique</h2>
-  <p>Protection, licences, contrats SaaS et d’intégration.</p>
+<div>
+  <img src="images/fast.png" alt="icon fast" width="100">
+  <h2>Rapide</h2>
+  <p>Nous vous livrons vite, vraiment <strong>très vite</strong>.</p>
 </div>
 
-<div class="card">
-  <img src="images/laptop.png" alt="icon ordinateur" width="100">
-  <h2>Nouvelles technologies</h2>
-  <p>Conditions générales d’utilisation, contrats de développement</p>
+<div>
+  <img src="images/trustable.png" alt="icon trustable" width="100">
+  <h2>Digne de confiance</h2>
+  <p>Vous pouvez nous faire confiance, <strong>vraiment</strong>.</p>
 </div>
 
-<div class="card">
-  <img src="images/book.png" alt="icon livre" width="100">
-  <h2>Propriété intellectuelle</h2>
-  <p>Définition de la stratégie, protection et audit de portefeuilles</p>
+<div>
+  <img src="images/affordable.png" alt="icon affordable" width="100">
+  <h2>Abordable</h2>
+  <p>Nous adaptons notre prix à <strong>votre situation</strong>.</p>
 </div>
 
-<div id="footer">
+<div>
   <p>Landing page créée à l'Atelier Google de Nancy</p>
 </div>
 <% end %>
@@ -309,20 +304,40 @@ a:hover {
 <% code("html") do %>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-12 col-sm-6 col-lg-4">
       <!-- div class="card" -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-12 col-sm-6 col-lg-4">
       <!-- div class="card" -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-12 col-sm-6 col-lg-4">
       <!-- div class="card" -->
     </div>
   </div>
 </div>
 <% end %>
+      </section>
+
+      <section class="readme-section">
+        <h2 class="readme-header">9. Publier votre <tag class="green">site</tag></h2>
+        <ol>
+          <li>1 - Créez un <code>compte</code> sur <a href="https://github.com/join">Github</a></li>
+          <li>2 - Créez un nouveau <code>repository</code>. Choisissez un nom pour votre projet, cochez la dernière case et cliquez sur <code>Create repository</code></li>
+          <img src='images/new_repo.png' width="100%" style="box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);" />
+          <br>
+          <li>3 - Faites <code>glisser</code> vos fichiers dans le repo</li>
+          <img src='images/drag.png' width="100%" style="box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);" />
+          <li>4 - Ensuite cliquez sur l'onglet <code>Settings</code>. Descendez jusqu'à <code>Github Pages</code>. Puis choisissez <code>master branch</code></li>
+          <li>5 - Enfin la <code>magie</code> opère. Votre <code>url</code> est créée</li>
+          <img src='images/link.png' width="100%" style="box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);" />
+        </ol>
       <img src="images/laptop-bottom.svg" alt="laptop" class="laptop">
       </section>
+
+      <h2 class="readme-header">Félicitations !</h2>
+
     </div>
   </div>
 </div>
+
+<%= partial "components/footer" %>

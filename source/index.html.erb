@@ -11,8 +11,10 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
 
       <section class="readme-section">
         <h2 class="readme-header">1. Commençons par le <tag class="green">setup</tag></h2>
+        <p>Ce setup sous entend que vous avez déjà installé <a href="https://www.google.com/intl/fr_fr/chrome/">Google Chrome</a> et <a href="https://www.sublimetext.com/3">Sublime Text</a>.</p>
+        <p>L'objectif de cet Atelier est de reproduire cette <a href="https://alyssaphi.github.io/google/">page web</a>.</p>
         <ol>
-          <li>1 - Ouvrez Sublime Text. un fenêtre noir devrait s'afficher.</li>
+          <li>1 - Ouvrez Sublime Text une fenêtre noire devrait s'afficher.</li>
           <li>2 - Créez un dossier <code>landing</code> sur votre bureaux. Glissez & déposez ce dossier dans Sublime Text window.</li>
           <li>
             3 - Dans la navigation gauche de Sublime Text :
@@ -36,9 +38,9 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
           <li>
             Pour gagner du temps, Faites clique-droit sur les images suivantes et sauvez les dans votre dossier <code>images</code>
             <ul class="list-inline">
-              <li><img src="images/fast.png" alt="" width="100"></li>
-              <li><img src="images/trustable.png" alt="" width="100"></li>
-              <li><img src="images/affordable.png" alt="" width="100"></li>
+              <li><img src="images/fast.png" alt="" width="350"></li>
+              <li><img src="images/trustable.png" alt="" width="350"></li>
+              <li><img src="images/affordable.png" alt="" width="350"></li>
             </ul>
           </li>
           <li>Commencez ensuite à partir de ce code HTML dans <code>index.html</code></li>
@@ -49,10 +51,11 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
     <meta charset="utf-8">
     <title>Atelier Google - Landing page</title>
   </head>
+
   <body>
     <h1>Mon projet</h1>
     <p>Punchline de votre projet de folie</p>
-    <a href="#" class="btn btn-blue">Contactez nous</a>
+    <a href="#">Contactez nous</a>
 
     <img src="images/fast.png" alt="icon fast" width="100">
     <h2>Rapide</h2>
@@ -66,15 +69,15 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
     <h2>Abordable</h2>
     <p>Nous adaptons notre prix à <strong>votre situation</strong>.</p>
 
-    <p>Landing page créée à l'Atelier Google de Nancy</p>
+    <p>Landing page créée à l'Atelier Google Numérique de Nancy</p>
 
-</body>
+  </body>
 </html>
 <% end %>
-        <h3>Extra - utiliser des icons personnels chiadés</h3>
+        <h3>Extra - utiliser des icônes personnelles chiadées</h3>
         <ul>
-          <li>Vous pouvez choisir vos icons sur <a href="https://iconstore.co/" target="_blank">IconStore</a>, <a href="https://thenounproject.com/" target="_blank">The Noun Project</a> ou <a href="https://nucleoapp.com/premium-icons/" target="_blank">NucleoApp</a> (ils ont des packs gratuits).</li>
-          <li><strong>Tips</strong>: Ne manquez pas de surveiller <a href="https://www.producthunt.com/search?q=icons" target="_blank">les nouvelles ressources d'icons sur Product Hunt</a></li>
+          <li>Vous pouvez choisir vos icônes sur <a href="https://iconstore.co/" target="_blank">IconStore</a>, <a href="https://thenounproject.com/" target="_blank">The Noun Project</a> ou <a href="https://nucleoapp.com/premium-icons/" target="_blank">NucleoApp</a> (ils ont des packs gratuits).</li>
+          <li><strong>Tips</strong>: Ne manquez pas de surveiller <a href="https://www.producthunt.com/search?q=icons" target="_blank">les nouvelles ressources d'icônes sur Product Hunt</a></li>
         </ul>
       </section>
 
@@ -92,7 +95,7 @@ title: Landing page HTML/CSS - Atelier Google de Nancy
   <link href='style.css' rel='stylesheet'>
 </head>
 <% end %>
-        <p>Copiez/collez ensuite le code CSS ci-dessous <code>style.css</code> et <strong>modifier le</strong> car il est intentionellement disgracieux</p>
+        <p>Copiez/collez ensuite le code CSS ci-dessous <code>style.css</code> et <strong>modifier le</strong> pour qu'il soit à votre goût</p>
         <ul>
           <li>Pour les fonts utilisez <a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
           <li>Pour les couleurs utilisez <a href="http://www.colorzilla.com/chrome/" target="_blank">Chrome plugin Colorzilla</a> pour récupérer les couleurs des autres sites</li>
@@ -144,19 +147,19 @@ a:hover {
 </div>
 
 <div>
-  <img src="images/fast.png" alt="icon fast" width="100">
+  <img src="images/fast.png" alt="icon fast">
   <h2>Rapide</h2>
   <p>Nous vous livrons vite, vraiment <strong>très vite</strong>.</p>
 </div>
 
 <div>
-  <img src="images/trustable.png" alt="icon trustable" width="100">
+  <img src="images/trustable.png" alt="icon trustable">
   <h2>Digne de confiance</h2>
   <p>Vous pouvez nous faire confiance, <strong>vraiment</strong>.</p>
 </div>
 
 <div>
-  <img src="images/affordable.png" alt="icon affordable" width="100">
+  <img src="images/affordable.png" alt="icon affordable">
   <h2>Abordable</h2>
   <p>Nous adaptons notre prix à <strong>votre situation</strong>.</p>
 </div>
@@ -212,25 +215,11 @@ a:hover {
   margin-bottom: 20px;
   height: 230px;
 }
-.btn-blue {
-  color: white;
-  background: #6772e5;
-  box-shadow: 0 4px 6px rgba(50,50,93,.11);
-  border-radius: 4px;
-  padding: 15px 20px;
-}
-.btn-blue:hover {
-  background: #7795f8;
-  color: white;
-}
-.container {
-  width: 100%!important;
-}
 <% end %>
 
 <h3>Extra - trouver une belle image de fond</h3>
 <ul>
-  <li>Vous trouverez des examples d'images sur <a href="https://www.pexels.com/" target="_blank">Pexels</a></li>
+  <li>Vous trouverez des exemples d'images sur <a href="https://www.pexels.com/" target="_blank">Pexels</a></li>
 </ul>
       </section>
       <section class="readme-section">
@@ -252,11 +241,11 @@ a:hover {
         </ul>
 <% code("html") do %>
 <div id="footer">
-  <ul class="list-inline">
-    <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
-    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
+  <ul>
+    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fab fa-github"></i></a></li>
   </ul>
 </div>
 <% end %>
